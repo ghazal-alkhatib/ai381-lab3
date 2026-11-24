@@ -52,7 +52,9 @@ def preprocessing() -> ColumnTransformer:
 # Change the settings, not just the names: a different model family or a clearly different setting each time.
 CANDIDATES = {
     "logreg_balanced": LogisticRegression(class_weight="balanced", max_iter=1000),
-    "rf_100_depth6_balanced": RandomForestClassifier(n_estimators=100, max_depth=6, class_weight="balanced", random_state=42),
+    "rf_100_depth6_balanced": RandomForestClassifier(
+        n_estimators=100, max_depth=6, class_weight="balanced", random_state=42
+    ),
     "gboost_150_depth2": GradientBoostingClassifier(n_estimators=150, max_depth=2, random_state=42),
 }
 
